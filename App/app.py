@@ -12,7 +12,8 @@ Here is the YouTube video transcription:
 """
 
 st.title("Transcript Master")
-
+linkedin_profile_url = 'https://www.linkedin.com/in/devasheeshchopra?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+st.write("Developed by: [Dev Asheesh Chopra](" + linkedin_profile_url + ")")
 youtube_link = st.text_input("Enter YouTube Video Link:")
 
 if st.button("Get Summary"):
