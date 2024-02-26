@@ -6,11 +6,9 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from urllib.parse import urlparse
 import os
 import google.generativeai as genai
-from dotenv import load_dotenv
 
-
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+api_key = os.environ.get('GOOGLE_API_KEY')
+genai.configure(api_key=api_key)
 
 def convert_to_video_address_link(input_link):
     parsed_url = urlparse(input_link)
